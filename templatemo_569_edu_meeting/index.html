@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Official website of Cardinal Otunga Girls' High School, Bungoma. A premier national school dedicated to academic excellence, spiritual growth, and holistic development.">
+    <meta name="author" content="Cardinal Otunga Girls">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Cardinal Otunga Girls' High School - Bungoma | Official Website</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    
+    <!-- Premium Deep Blue & Crisp White Style Corrections -->
+    <style>
+      :root {
+        --brand-blue-dark: #0B2545;
+        --brand-blue-royal: #134074;
+        --brand-blue-light: #1D4ED8;
+        --brand-sky: #EEF2F6;
+        --text-dark: #1E293B;
+        --text-muted: #64748B;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #FFFFFF;
+        color: var(--text-dark);
+      }
+
+      /* High-Contrast Section Labeling */
+      .section-label {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--brand-blue-light);
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .section-main-title {
+        font-size: 36px;
+        font-weight: 800;
+        color: var(--brand-blue-dark);
+        margin-bottom: 40px;
+      }
+
+      /* Premium Top Bar & Header */
+      .sub-header {
+        background-color: var(--brand-blue-dark) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 12px 0;
+      }
+
+      .sub-header p {
+        color: #FFFFFF !important;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+
+      .sub-header em {
+        font-style: normal;
+        color: #93C5FD;
+        font-weight: 700;
+      }
+
+      header.header-area {
+        background-color: #FFFFFF !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        padding: 15px 0;
+      }
+
+      header.header-area .main-nav .nav li a {
+        color: var(--brand-blue-dark) !important;
+        font-weight: 600;
+        font-size: 15px;
+      }
+
+      header.header-area .main-nav .nav li a:hover,
+      header.header-area .main-nav .nav li a.active {
+        color: var(--brand-blue-light) !important;
+      }
+
+      /* Main Hero Banner Area Custom Space Framework */
+      .hero-banner {
+        position: relative;
+        background: linear-gradient(rgba(11, 37, 69, 0.85), rgba(19, 64, 116, 0.85)), 
+                    url('assets/images/hero-bg.jpg'); /* Local Target Background */
+        background-size: cover;
+        background-position: center;
+        padding: 240px 0 180px 0; /* Enhanced padding keeps titles away from top sticky headers */
+        color: #FFFFFF;
+      }
+
+      .hero-caption h2 {
+        font-size: 52px;
+        font-weight: 900;
+        line-height: 1.2;
+        margin-bottom: 25px;
+      }
+
+      .hero-caption p {
+        font-size: 18px;
+        max-width: 850px;
+        margin: 0 auto 40px auto; /* Structured centering configuration - balances elements nicely */
+        text-align: center;
+        opacity: 0.95;
+        line-height: 1.8;
+      }
+
+      /* Static Visual Info Blocks */
+      .info-block-card {
+        background-color: #FFFFFF;
+        border-left: 5px solid var(--brand-blue-royal);
+        padding: 30px;
+        margin-bottom: 25px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+        border-radius: 0 12px 12px 0;
+      }
+
+      .info-block-card h4 {
+        color: var(--brand-blue-dark);
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .info-block-card p {
+        color: var(--text-muted);
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+
+      /* Department Showcase Section */
+      .dept-card {
+        background: #FFFFFF;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        margin-bottom: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .dept-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(11, 37, 69, 0.1);
+      }
+
+      .dept-img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .dept-body {
+        padding: 25px;
+      }
+
+      .dept-body h4 {
+        color: var(--brand-blue-dark);
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+
+      .dept-body p {
+        color: var(--text-muted);
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      /* Metrics Section */
+      .metric-strip {
+        background-color: var(--brand-blue-dark);
+        color: #FFFFFF;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .metric-number {
+        font-size: 42px;
+        font-weight: 800;
+        color: #FFFFFF;
+      }
+
+      .metric-label {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #93C5FD;
+      }
+
+      /* Premium Footer Architecture */
+      .custom-footer-base {
+        background-color: #07162C;
+        color: #94A3B8;
+        padding: 40px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+<body>
+
+  <!-- Top Informative Sub Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+            <p>Motto: <em>Like Eagles, We Soar High</em> | KNEC Registration Code: <strong>36611001</strong></p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+          <div class="right-icons">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Navigation Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <a href="index.html" class="logo" style="margin-top: 10px;">
+                          <span style="font-size: 20px; font-weight: 800; color: var(--brand-blue-dark);">CARDINAL OTUNGA GIRLS</span>
+                      </a>
+                      <ul class="nav">
+                          <li><a href="#top" class="active">Home</a></li>
+                          <li><a href="#about-section">About Us</a></li>
+                          <li><a href="#departments-section">Academic Departments</a></li> 
+                          <li><a href="#cocurricular-section">Co-Curriculars</a></li>
+                          <li><a href="#infrastructure-section">Campus Life</a></li>
+                          <li><a href="#contact-section">Contact</a></li> 
+                      </ul>        
+                      <a class='menu-trigger'><span>Menu</span></a>
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Navigation Header Area End ***** -->
+
+  <!-- ***** High-Impact Hero Banner ***** -->
+  <section class="hero-banner" id="top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="hero-caption text-center">
+              <h2>Nurturing Academic Gems, Empowering Future Leaders</h2>
+              <p>A leading National School rooted in deep Catholic traditions, rigid holistic discipline and an architectural commitment to producing world-class women leaders who fly above limitations.</p>
+              <div class="main-button-red" style="display: inline-block;">
+                  <a href="#contact-section" style="background-color: var(--brand-blue-light); border-radius: 30px; padding: 12px 30px;">Direct Enrollment Inquiry</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- ==================== SECTION: ABOUT US & LEADERSHIP INSIGHTS ==================== -->
+  <section id="about-section" style="padding: 90px 0; background-color: #FFFFFF;">
+    <div class="container">
+      <div class="row">
+        
+        <!-- Left Side: Core Statements -->
+        <div class="col-lg-6 mb-5">
+          <span class="section-label">Institutional Overview</span>
+          <h2 class="section-main-title">A Tradition of Pure Merit</h2>
+          
+          <div style="background-color: var(--brand-sky); padding: 35px; border-radius: 12px; margin-bottom: 25px;">
+            <h4 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 15px;">The Principal's Welcome Address</h4>
+            <p style="color: var(--text-dark); line-height: 1.7; font-size: 15px; margin-bottom: 0;">
+              "At Cardinal Otunga Girls' High School, our vision is built completely on academic resilience, moral precision and structured responsibility. In collaboration with the Ministry of Education, Teacher's Service Commission and our supportive Board of Management, we manage a secure incubation center where young women expand their creative and analytical horizons to match international career expectations."
+            </p>
+          </div>
+
+          <div style="background-color: #F8FAFC; padding: 30px; border-radius: 12px; border: 1px solid #E2E8F0;">
+            <h5 style="color: var(--brand-blue-royal); font-weight: 700; margin-bottom: 10px;">Our Vision Statement</h5>
+            <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 0;">
+              To be the premium regional benchmark center for excellence, molding holistic, innovative girls who confidently transitions directly into global universities and leadership workspaces.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Side: Structural Framework Blocks -->
+        <div class="col-lg-6">
+          <span class="section-label">Core Pillars & Value Systems</span>
+          <h2 class="section-main-title">Our Operational Blueprint</h2>
+
+          <div class="info-block-card">
+            <h4>Historical Background & Catholic Tradition</h4>
+            <p>
+              Established under the strict spiritual and management sponsorship of the Catholic Diocese of Bungoma, our institution honors the robust lifelong heritage of integrity, social justice, and educational investment established by the late servant leader, Maurice Cardinal Otunga.
+            </p>
+          </div>
+
+          <div class="info-block-card">
+            <h4>The Student Prefects Council System</h4>
+            <p>
+              Governance at the student level is managed through a democratically audited council. Our leaders are trained in public speech, conflict resolution, peer mentorship and administrative assistance, ensuring standard student welfare across all class levels.
+            </p>
+          </div>
+
+          <div class="info-block-card">
+            <h4>Environmental Stewardship (Green School Policy)</h4>
+            <p>
+              We run a sustainable campus ecosystem. Through student-led agriculture clubs, active localized tree planting initiatives, water conservation awareness campaigns and clean energy optimization programs, our girls learn practical climate responsibilities.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: ACADEMIC DEPARTMENTS & CURRICULUM ==================== -->
+  <section id="departments-section" style="padding: 90px 0; background-color: var(--brand-sky); clear: both;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <span class="section-label">Academic Framework</span>
+          <h2 class="section-main-title">Our Main Core Departments</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        
+        <!-- Department 1: Sciences -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+            <img src="assets/images/science.jpg" class="img-fluid" alt="Sciences and STEM" style="width: 100%; display: block !important; height: auto;">
+            <div style="padding: 25px;">
+              <h4 style="color: var(--brand-blue-dark); font-weight: 700; font-size: 20px; margin-bottom: 12px;">Department of Sciences</h4>
+              <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 0;">Comprising Biology, Chemistry and Physics. Our well-equipped laboratory layout exposes students to rigorous practical analysis, hypothesis validation and annual Science Congress innovations.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Department 2: Mathematics -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+            <img src="assets/images/math.jpg" class="img-fluid" alt="Mathematics Center" style="width: 100%; display: block !important; height: auto;">
+            <div style="padding: 25px;">
+              <h4 style="color: var(--brand-blue-dark); font-weight: 700; font-size: 20px; margin-bottom: 12px;">Department of Mathematics</h4>
+              <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 0;">Driving quantitative accuracy, logic formulation and systematic calculations. The department hosts regular internal contests and registers good scores in the KCSE National examinations.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Department 3: Languages -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+            <img src="assets/images/linguistics.jpg" class="img-fluid" alt="Linguistics and Languages" style="width: 100%; display: block !important; height: auto;">
+            <div style="padding: 25px;">
+              <h4 style="color: var(--brand-blue-dark); font-weight: 700; font-size: 20px; margin-bottom: 12px;">Languages & Linguistics</h4>
+              <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 0;">Nurturing professional communications through comprehensive English, Kiswahili and Foreign Language elective studies. We guide voice training, creative writing and public essay entries.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Department 4: Humanities -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+            <img src="assets/images/humanities.jpg" class="img-fluid" alt="Humanities Framework" style="width: 100%; display: block !important; height: auto;">
+            <div style="padding: 25px;">
+              <h4 style="color: var(--brand-blue-dark); font-weight: 700; font-size: 20px; margin-bottom: 12px;">Department of Humanities</h4>
+              <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 0;">Exploring global sociology, history, geographical mappings and Christian Religious Education. This track establishes critical critical-thinking tools and ethical perspectives regarding societal development.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Department 5: Applied Sciences -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+            <img src="assets/images/comp-lab.jpg" class="img-fluid" alt="Applied Sciences" style="width: 100%; display: block !important; height: auto;">
+            <div style="padding: 25px;">
+              <h4 style="color: var(--brand-blue-dark); font-weight: 700; font-size: 20px; margin-bottom: 12px;">Applied & Technical Sciences</h4>
+              <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 0;">Instilling future-proof modern technical survival skills including highly interactive Computer Studies, standard Home Science practices and practical structural agricultural modules.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: CO-CURRICULAR EXCELLENCE ==================== -->
+  <section id="cocurricular-section" style="padding: 90px 0; background-color: #FFFFFF;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4">
+          <img src="assets/images/sports.jpg" alt="Co-curricular Activities" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+        </div>
+        <div class="col-lg-6">
+          <span class="section-label">Talent & Leadership Cultivation</span>
+          <h2 class="section-main-title">Co-Curricular Dominance</h2>
+          <p style="color: var(--text-dark); margin-bottom: 20px; line-height: 1.7;">
+            We strongly believe that structured education extends far beyond class boundaries. Cardinal Otunga Girls' High School is a highly competitive powerhouse in regional co-curricular championships.
+          </p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+              <i class="fa fa-check-circle" style="color: var(--brand-blue-light); margin-right: 12px; margin-top: 4px; font-size: 18px;"></i>
+              <span><strong>Drama & Music Festivals:</strong> Award-winning regional and national sets focusing on local folk songs, spoken word compositions and orchestration.</span>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+              <i class="fa fa-check-circle" style="color: var(--brand-blue-light); margin-right: 12px; margin-top: 4px; font-size: 18px;"></i>
+              <span><strong>Athletics & Ball Games:</strong> Exceptional indoor and outdoor setups for Soccer, Basketball, Volleyball, Handball, Badminton, Table Tennis and Lawn Tennis tracking professional fitness.</span>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+              <i class="fa fa-check-circle" style="color: var(--brand-blue-light); margin-right: 12px; margin-top: 4px; font-size: 18px;"></i>
+              <span><strong>Clubs & Movements:</strong> Active deployments for St. John's Ambulance, President's Award Scheme, Young Catholic Students (YCS) and the elite Journalism Club.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: CAMPUS LIFE & INFRASTRUCTURE ==================== -->
+  <section id="infrastructure-section" style="padding: 90px 0; background-color: var(--brand-sky);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <span class="section-label">Campus Environment</span>
+          <h2 class="section-main-title">Premium Facilities & Resources</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4">
+          <div style="background-color: #FFFFFF; padding: 30px; border-radius: 12px; height: 100%;">
+            <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 15px;"><i class="fa fa-bed" style="color: var(--brand-blue-light); margin-right: 10px;"></i> Modern Hostels</h5>
+            <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Our spacious, well-aerated boarding dormitories provide clean sanitization spaces, optimal safety storage containers and assigned multi-point safety exits managed by resident matrons.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 mb-4">
+          <div style="background-color: #FFFFFF; padding: 30px; border-radius: 12px; height: 100%;">
+            <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 15px;"><i class="fa fa-laptop" style="color: var(--brand-blue-light); margin-right: 10px;"></i> Computer Resource Rooms</h5>
+            <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Equipped with modern desktop modules, secure high-speed local networks and specific coding tools where our girls can perform technical research and educational workflows.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 mb-4">
+          <div style="background-color: #FFFFFF; padding: 30px; border-radius: 12px; height: 100%;">
+            <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 15px;"><i class="fa fa-cutlery" style="color: var(--brand-blue-light); margin-right: 10px;"></i> Dining Complex</h5>
+            <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">A modern kitchen facility focused on strictly audited clean dietary standards, serving regular, balanced programmatic nutritional meals to sustain healthy academic focus metrics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategic Institutional Metrics Strip -->
+  <section class="metric-strip">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="metric-number">96%</div>
+          <div class="metric-label">University Entry Rate</div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="metric-number">1400+</div>
+          <div class="metric-label">Enrolled Scholars - Annually</div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="metric-number">113</div>
+          <div class="metric-label">TSC Teaching Faculty</div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="metric-number">A-</div>
+          <div class="metric-label">KCSE Mean Target</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: CONTACT & INQUIRIES ==================== -->
+  <section class="contact-us" id="contact-section" style="padding: 90px 0 0 0; background-color: #FFFFFF;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 align-self-center mb-5">
+          <form id="contact" action="" method="post" style="border: 1px solid #E2E8F0;">
+            <div class="row">
+              <div class="col-lg-12">
+                <span class="section-label">Communication Center</span>
+                <h2 style="margin-bottom: 25px;">Direct Registry Contact</h2>
+              </div>
+              <div class="col-lg-6">
+                <input name="name" type="text" placeholder="Full Student Name / Guardian Name*" required="">
+              </div>
+              <div class="col-lg-6">
+                <input name="email" type="email" placeholder="Active Email Address*" required="">
+              </div>
+              <div class="col-lg-12">
+                <textarea name="message" placeholder="Type your specific administrative or intake query here...*" required=""></textarea>
+              </div>
+              <div class="col-lg-12">
+                <button type="submit" class="btn" style="background-color: var(--brand-blue-light) !important;">Dispatch Document Form</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="right-info" style="background-color: var(--brand-blue-dark); border-radius: 12px; padding: 40px; color: #FFFFFF;">
+            <h5 style="color: #FFFFFF; font-weight: 700; margin-bottom: 25px; border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Contact Specifics</h5>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 20px;">
+                <h6 style="color: #93C5FD; font-weight: 600; font-size: 14px; text-transform: uppercase;">Telephone Registry</h6>
+                <span style="font-size: 15px;">+254 720 000000<br>+254 733 000000</span>
+              </li>
+              <li style="margin-bottom: 20px;">
+                <h6 style="color: #93C5FD; font-weight: 600; font-size: 14px; text-transform: uppercase;">Official Domain Email</h6>
+                <span style="font-size: 15px;">info@cardinalotungagirls.sc.ke</span>
+              </li>
+              <li style="margin-bottom: 20px;">
+                <h6 style="color: #93C5FD; font-weight: 600; font-size: 14px; text-transform: uppercase;">Postal Framework</h6>
+                <span style="font-size: 15px;">P.O. Box 216 - 50200,<br>Bungoma Town, Western Kenya</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer System Baseline -->
+    <div class="custom-footer-base">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p style="margin-bottom: 8px; color: #FFFFFF;">Copyright © 2026 Cardinal Otunga Girls' High School Bungoma. All Rights Reserved.</p>
+            <p style="margin-bottom: 0; font-size: 12px; color: #64748B;">Designed and Developed by: <span style="color: #93C5FD; font-weight: 600;">Shalleen H</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Javascript Source Files -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/video.js"></script>
+  <script src="assets/js/slick-slider.js"></script>
+</body>
+</html>
