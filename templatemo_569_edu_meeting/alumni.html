@@ -93,7 +93,7 @@
                     url('assets/images/hero-bg.jpg'); 
         background-size: cover;
         background-position: center;
-        padding: 200px 0 130px 0;
+        padding: 250px 0 130px 0; /* Adjusted top padding from 200px to 250px */
         color: #FFFFFF;
         text-align: center;
       }
@@ -120,6 +120,21 @@
         border-radius: 16px;
         padding: 40px;
         box-shadow: 0 10px 30px rgba(11, 37, 69, 0.05);
+      }
+
+      /* Contact Card Styling */
+      .contact-info-card {
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 6px 18px rgba(11, 37, 69, 0.03);
+        border: 1px solid #E2E8F0;
+        height: 100%;
+        transition: transform 0.2s ease;
+      }
+      
+      .contact-info-card:hover {
+        transform: translateY(-4px);
       }
 
       .custom-footer-base {
@@ -178,6 +193,7 @@
           </div>
       </div>
   </header>
+
   <section class="alumni-hero-banner">
       <div class="container">
         <div class="row">
@@ -191,6 +207,7 @@
       </div>
   </section>
 
+  <!-- Benefits & Registration Section -->
   <section style="padding: 90px 0; background-color: #FFFFFF;">
     <div class="container">
       <div class="row">
@@ -253,18 +270,78 @@
 
       </div>
     </div>
+  </section>
 
-    <div class="custom-footer-base" style="position: absolute; left: 0; right: 0; margin-top: 90px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p style="margin-bottom: 8px; color: #FFFFFF;">Copyright © 2026 Cardinal Otunga Girls' National School Bungoma. All Rights Reserved.</p>
-            <p style="margin-bottom: 0; font-size: 12px; color: #64748B;">Designed and Developed by: <span style="color: #93C5FD; font-weight: 600;">Shalleen H</span></p>
+  <!-- NEW SECTION: Alumni Office Contact Desk -->
+  <section style="padding: 90px 0; background-color: var(--brand-sky);">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <span class="section-label">Direct Communication</span>
+          <h2 class="section-main-title" style="margin-bottom: 15px;">Connect with the Alumni Desk</h2>
+          <p style="color: var(--text-muted); line-height: 1.7;">
+            Have questions about upcoming association frameworks, coordinate manual data updates, or planning a graduation reunion milestone? Get in touch directly with our dedicated coordinator.
+          </p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <!-- Contact Card 1: Person Profile -->
+        <div class="col-md-4 mb-4">
+          <div class="contact-info-card text-center">
+            <div style="color: var(--brand-blue-light); font-size: 32px; margin-bottom: 15px;">
+              <i class="fa fa-user-circle"></i>
+            </div>
+            <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 8px;">Alumni Relations Office</h5>
+            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 0;">
+              Communications Coordinator<br>
+              Cardinal Otunga Girls' National School
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Card 2: Email -->
+        <div class="col-md-4 mb-4">
+          <div class="contact-info-card text-center">
+            <div style="color: var(--brand-blue-light); font-size: 32px; margin-bottom: 15px;">
+              <i class="fa fa-envelope"></i>
+            </div>
+            <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 8px;">Email Inquiries</h5>
+            <p style="font-size: 14px; margin-bottom: 0;">
+              <a href="mailto:alumni@cardinalotungagirls.sc.ke" style="color: var(--brand-blue-light); font-weight: 600; text-decoration: none;">alumni@cardinalotungagirls.sc.ke</a>
+            </p>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Response within 48 business hours</p>
+          </div>
+        </div>
+
+        <!-- Contact Card 3: Phone/Hours -->
+        <div class="col-md-4 mb-4">
+          <div class="contact-info-card text-center">
+            <div style="color: var(--brand-blue-light); font-size: 32px; margin-bottom: 15px;">
+              <i class="fa fa-phone"></i>
+            </div>
+            <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 8px;">Call or Visit</h5>
+            <p style="font-size: 14px; color: var(--text-dark); font-weight: 600; margin-bottom: 0;">
+              +254 (0) 7XX XXX XXX
+            </p>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Mon – Fri: 8:00 AM – 4:00 PM EAT</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Corrected Footer Base Structure -->
+  <footer class="custom-footer-base">
+    <div class="container">
+      <div class="row">
+        <div class="md-12 text-center">
+          <p style="margin-bottom: 8px; color: #FFFFFF;">Copyright © 2026 Cardinal Otunga Girls' National School Bungoma. All Rights Reserved.</p>
+          <p style="margin-bottom: 0; font-size: 12px; color: #64748B;">Designed and Developed by: <span style="color: #93C5FD; font-weight: 600;">Shalleen H</span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
