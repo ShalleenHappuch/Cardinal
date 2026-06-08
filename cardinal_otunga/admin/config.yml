@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: main # Change to 'master' if your main git branch is called master
+
+# This tells the CMS to use Uploadcare for images and PDFs
+media_library:
+  name: uploadcare
+  config:
+    publicKey: "PLACEHOLDER_FOR_NOW" # We will change this later
+
+collections:
+  - name: "assignments"
+    label: "Student Assignments"
+    folder: "content/assignments" # Where the CMS will save the homework data
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{title}}"
+    fields:
+      - { label: "Assignment Title", name: "title", widget: "string" }
+      - { label: "Date Issued", name: "date", widget: "datetime" }
+      
+      - label: "Target Form/Class"
+        name: "form"
+        widget: "select"
+        options: ["Form 1", "Form 2", "Form 3", "Form 4"]
+
+      - label: "Department"
+        name: "department"
+        widget: "select"
+        options: ["Sciences", "Mathematics", "Languages", "Humanities", "Applied Sciences"]
+
+      - label: "Subject"
+        name: "subject"
+        widget: "select"
+        options: [
+          "Mathematics", "English", "Kiswahili", "Biology", 
+          "Chemistry", "Physics", "History", "Geography", 
+          "CRE", "Business Studies", "Agriculture", "Computer Studies"
+        ]
+
+      - label: "Upload Homework File (PDF)"
+        name: "assignment_file"
+        widget: "file"
