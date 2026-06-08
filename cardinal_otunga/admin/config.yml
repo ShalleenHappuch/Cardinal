@@ -40,3 +40,26 @@ collections:
       - label: "Upload Homework File (PDF)"
         name: "assignment_file"
         widget: "file"
+
+        # Inside my config.yml collections block:
+
+  - name: "leadership"
+    label: "School Leadership"
+    folder: "content/leadership"
+    create: true
+    fields:
+      - { label: "Full Name", name: "title", widget: "string" }
+      - { label: "Role/Title", name: "role", widget: "string" }
+      - { label: "Rank/Tier", name: "tier", widget: "select", options: ["Principal", "Deputy", "HOD"] }
+      - { label: "Profile Photo", name: "photo", widget: "image" }
+      - { label: "Short Message", name: "bio", widget: "text", required: false }
+
+  - name: "calendar"
+    label: "School Calendar"
+    folder: "content/calendar"
+    create: true
+    fields:
+      - { label: "Event Title", name: "title", widget: "string" }
+      - { label: "Event Date", name: "event_date", widget: "date" }
+      - { label: "Category", name: "category", widget: "select", options: ["Academic", "Sports", "Welfare", "Holiday"] }
+      - { label: "Event Details", name: "body", widget: "text" }

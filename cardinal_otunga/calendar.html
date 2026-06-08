@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Institutional Calendar | Cardinal Otunga Girls</title>
+  
+  <style>
+    /* ==========================================================================
+       1. BRAND SYSTEM VARIABLES & GLOBAL BASE
+       ========================================================================== */
+    :root {
+      --primary-dark: #111827;      /* High-contrast charcoal */
+      --text-muted: #6b7280;        /* Editorial gray */
+      --border-light: #e5e7eb;      /* Thin visual split */
+      --bg-card-hover: #f9fafb;     /* Delicate interaction color */
+      --accent-blue: #0284c7;       /* School signature tone */
+      
+      /* Muted Pastel Tag System */
+      --tag-sports-bg: #eff6ff;
+      --tag-sports-text: #1d4ed8;
+      --tag-academic-bg: #f5f3ff;
+      --tag-academic-text: #6d28d9;
+      --tag-national-bg: #ecfdf5;
+      --tag-national-text: #047857;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--primary-dark);
+      background-color: #ffffff;
+      line-height: 1.5;
+      padding-bottom: 100px;
+    }
+
+    .container {
+      max-width: 900px; /* Slimmer boundary creates an elegant visual column */
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Page Introduction Header */
+    .calendar-header {
+      padding: 60px 0 32px 0;
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 32px;
+    }
+
+    .calendar-header h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .calendar-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* ==========================================================================
+       2. TIMELINE CARDS DESIGN
+       ========================================================================== */
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-row-card {
+      display: flex;
+      align-items: center;
+      padding: 28px 24px;
+      border-bottom: 1px solid #f3f4f6;
+      border-radius: 12px;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* Sophisticated shift to the right on hover */
+    .event-row-card:hover {
+      background-color: var(--bg-card-hover);
+      transform: translateX(6px);
+      border-bottom-color: transparent;
+    }
+
+    /* Stark Typographic Date block */
+    .date-anchor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 80px;
+      margin-right: 40px;
+    }
+
+    .date-num {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .date-text {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* Core Content Block */
+    .event-body {
+      flex-grow: 1;
+      padding-right: 24px;
+    }
+
+    .event-info-strip {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 8px;
+    }
+
+    .event-timestamp {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .event-headline {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin: 0 0 6px 0;
+      letter-spacing: -0.01em;
+    }
+
+    .event-snippet {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Premium Pill Badge Sub-system */
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .tag-sports { background-color: var(--tag-sports-bg); color: var(--tag-sports-text); }
+    .tag-academic { background-color: var(--tag-academic-bg); color: var(--tag-academic-text); }
+    .tag-national { background-color: var(--tag-national-bg); color: var(--tag-national-text); }
+
+    /* Right Action Alignment */
+    .action-trigger {
+      white-space: nowrap;
+    }
+
+    .link-details {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .link-details .inline-arrow {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .event-row-card:hover .link-details {
+      color: var(--accent-blue);
+    }
+
+    .event-row-card:hover .link-details .inline-arrow {
+      transform: translateX(4px);
+    }
+
+    /* ==========================================================================
+       3. RESPONSIVE BREAKPOINT
+       ========================================================================== */
+    @media (max-width: 768px) {
+      .event-row-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 12px;
+      }
+      
+      .date-anchor {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 6px;
+        min-width: auto;
+        margin-bottom: 12px;
+      }
+      
+      .date-text {
+        margin-top: 0;
+      }
+      
+      .action-trigger {
+        margin-top: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <header class="calendar-header">
+      <h1>School Calendar & Events</h1>
+      <p>Stay informed regarding upcoming institutional milestones, national sports assemblies, and parental forums.</p>
+    </header>
+
+    <main class="timeline-list">
+      
+      <!-- Card Event 1 -->
+      <div class="event-row-card">
+        <div class="date-anchor">
+          <span class="date-num">24</span>
+          <span class="date-text">Jun</span>
+        </div>
+        <div class="event-body">
+          <div class="event-info-strip">
+            <span class="pill-badge tag-sports">Sports</span>
+            <span class="event-timestamp">09:00 AM — 04:00 PM</span>
+          </div>
+          <h3 class="event-headline">National Badminton Championship Finals</h3>
+          <p class="event-snippet">Our elite squad travels to defend their regional title status. Live stream access links will be deployed on the student dashboard portal.</p>
+        </div>
+        <div class="action-trigger">
+          <a href="#" class="link-details">Details <span class="inline-arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- Card Event 2 -->
+      <div class="event-row-card">
+        <div class="date-anchor">
+          <span class="date-num">02</span>
+          <span class="date-text">Jul</span>
+        </div>
+        <div class="event-body">
+          <div class="event-info-strip">
+            <span class="pill-badge tag-academic">Academic</span>
+            <span class="event-timestamp">08:30 AM Start</span>
+          </div>
+          <h3 class="event-headline">Term 2 Main Visiting & Academic Review Day</h3>
+          <p class="event-snippet">An essential forum enabling parent-teacher collaboration and individualized student performance milestone evaluations.</p>
+        </div>
+        <div class="action-trigger">
+          <a href="#" class="link-details">Details <span class="inline-arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- Card Event 3 -->
+      <div class="event-row-card">
+        <div class="date-anchor">
+          <span class="date-num">15</span>
+          <span class="date-text">Jul</span>
+        </div>
+        <div class="event-body">
+          <div class="event-info-strip">
+            <span class="pill-badge tag-national">National Event</span>
+            <span class="event-timestamp">All Day Event</span>
+          </div>
+          <h3 class="event-headline">National ICT Innovation & Robotics Summit</h3>
+          <p class="event-excerpt">Cardinal Otunga Girls hosts the annual cross-institutional tech exhibition, putting custom hardware automation systems on display.</p>
+        </div>
+        <div class="action-trigger">
+          <a href="#" class="link-details">Details <span class="inline-arrow">→</span></a>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
