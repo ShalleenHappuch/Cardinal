@@ -27,7 +27,6 @@
         --text-muted: #64748B;
       }
 
-      /* Premium Fluid Transitions */
       html {
         scroll-behavior: smooth;
       }
@@ -38,12 +37,23 @@
         color: var(--text-dark);
       }
 
-      /* Prevents Sticky Header from obscuring section headings on jump-navigation */
+      /* Reusable Structural Architecture (CMS Ready) */
+      .py-premium {
+        padding: 85px 0;
+      }
+      
+      .bg-sky {
+        background-color: var(--brand-sky);
+      }
+
+      .bg-white {
+        background-color: #FFFFFF;
+      }
+
       section[id] {
         scroll-margin-top: 80px;
       }
 
-      /* High-Contrast Section Labeling */
       .section-label {
         font-size: 14px;
         text-transform: uppercase;
@@ -81,7 +91,6 @@
         font-weight: 700;
       }
 
-      /* Slim, Modern Sticky Navigation Block Override */
       header.header-area {
         position: sticky !important;
         top: 0 !important;
@@ -142,7 +151,7 @@
         top: 23px !important;
       }
 
-      /* Optimized Hero Banner Area Spacing */
+      /* Hero Banner Area styling */
       .hero-banner {
         position: relative;
         background: linear-gradient(rgba(11, 37, 69, 0.85), rgba(19, 64, 116, 0.85)), 
@@ -169,13 +178,22 @@
         line-height: 1.7;
       }
 
+      /* White Content Pockets */
+      .card-pocket {
+        background-color: #FFFFFF;
+        padding: 35px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        height: 100%;
+      }
+
       /* Static Visual Info Blocks */
       .info-block-card {
         background-color: #FFFFFF;
         border-left: 5px solid var(--brand-blue-royal);
         padding: 25px 30px;
         margin-bottom: 20px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.03);
         border-radius: 0 12px 12px 0;
       }
 
@@ -192,7 +210,7 @@
         font-size: 14px;
       }
 
-      /* Values Layout Framework */
+      /* Scannable Icon-Driven Core Values Layout Framework */
       .values-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -202,15 +220,23 @@
 
       .value-card {
         background-color: var(--brand-sky);
-        padding: 20px;
+        padding: 25px 20px;
         border-radius: 8px;
         border-bottom: 3px solid var(--brand-blue-light);
+        text-align: center;
+      }
+
+      .value-card .value-icon {
+        font-size: 28px;
+        color: var(--brand-blue-light);
+        margin-bottom: 15px;
+        display: inline-block;
       }
 
       .value-card h5 {
         color: var(--brand-blue-dark);
         font-weight: 700;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         font-size: 16px;
       }
 
@@ -271,6 +297,36 @@
         color: var(--text-muted);
         font-size: 14px;
         line-height: 1.6;
+      }
+
+      /* Button Refactoring */
+      .btn-brand-primary {
+        background-color: var(--brand-blue-light) !important;
+        color: #FFFFFF !important;
+        border-radius: 30px;
+        padding: 12px 30px;
+        font-weight: 600;
+        transition: opacity 0.2s ease;
+      }
+
+      .btn-brand-primary:hover {
+        opacity: 0.9;
+      }
+
+      .btn-brand-outline {
+        border: 2px solid var(--brand-blue-light);
+        color: var(--brand-blue-light) !important;
+        background: transparent;
+        border-radius: 30px;
+        padding: 10px 28px;
+        font-weight: 600;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+
+      .btn-brand-outline:hover {
+        background-color: var(--brand-blue-light);
+        color: #FFFFFF !important;
       }
 
       /* Metrics Section */
@@ -362,7 +418,6 @@
           <div class="row">
               <div class="col-12">
                   <nav class="main-nav">
-                      <!-- Brand Logo Alignment Context Hook -->
                       <a href="index.html" class="logo">
                           <img src="assets/images/logo.png" alt="School Logo" style="height: 50px; width: auto; margin-right: 12px; display: inline-block;">
                           <span style="font-size: 14px; font-weight: 800; color: var(--brand-blue-dark); line-height: 1.3; display: inline-block; letter-spacing: 0.5px;">CARDINAL OTUNGA GIRLS'<br>NATIONAL SCHOOL</span>
@@ -390,8 +445,8 @@
             <div class="hero-caption text-center">
               <h2>Nurturing Academic Gems, Empowering Future Leaders</h2>
               <p>Welcome to Cardinal Otunga Girls' National School. Rooted in deep Catholic traditions, we are a leading center for secondary education committed to producing well-rounded, innovative young women who fly above all limitations.</p>
-              <div class="main-button-red" style="display: inline-block;">
-                  <a href="#contact-section" style="background-color: var(--brand-blue-light); border-radius: 30px; padding: 12px 30px;">Direct Enrollment Inquiry</a>
+              <div style="display: inline-block;">
+                  <a href="#contact-section" class="btn-brand-primary">Direct Enrollment Inquiry</a>
               </div>
             </div>
           </div>
@@ -399,8 +454,7 @@
       </div>
   </section>
 
-  <!-- Section 1: Our Profile (Lightly Coloured Background Layer) -->
-  <section id="about-section" style="padding: 90px 0; background-color: var(--brand-sky);">
+  <section id="about-section" class="py-premium bg-sky">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -410,9 +464,8 @@
       </div>
       
       <div class="row align-items-stretch">
-        <!-- Left Column: Mission & Vision popped onto high-contrast white cards -->
         <div class="col-lg-5 mb-4 mb-lg-0">
-          <div style="background-color: #FFFFFF; padding: 35px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); height: 100%;">
+          <div class="card-pocket">
             <h4 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 12px; font-size: 20px;">Our Mission</h4>
             <p style="color: var(--text-dark); line-height: 1.7; font-size: 14px; margin-bottom: 30px; font-style: italic;">
               "Committed to playing a leading role in providing quality education to the girl-child for socio-economic empowerment and responsibility to the society."
@@ -424,29 +477,28 @@
           </div>
         </div>
         
-        <!-- Right Column: Timeline Given Room to Breath -->
         <div class="col-lg-7">
           <div style="padding-left: 20px;">
             <h4 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 25px;">School History & Milestones</h4>
             
             <div class="timeline-item">
               <div class="timeline-year">1972</div>
-              <p style="font-size: 14px; margin-bottom: 0;">Established on a self-help basis by the local community and Church as Kibabii Girls' Harambee Secondary School with just 37 students.</p>
+              <p style="font-size: 14px; margin-bottom: 0;">Established by the local community and Church as Kibabii Girls' Harambee Secondary School with 37 pioneer students.</p>
             </div>
             
             <div class="timeline-item">
               <div class="timeline-year">1973</div>
-              <p style="font-size: 14px; margin-bottom: 0;">Renamed in honor of the late Maurice Michael Cardinal Otunga, embedding a deep spiritual heritage of humility and service.</p>
+              <p style="font-size: 14px; margin-bottom: 0;">Renamed in honor of Maurice Michael Cardinal Otunga, embedding a rich spiritual heritage of humility and service.</p>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-year">1982</div>
-              <p style="font-size: 14px; margin-bottom: 0;">Officially registered as a Provincial Girls' Boarding School, expanding facilities to accommodate growing regional enrollment.</p>
+              <p style="font-size: 14px; margin-bottom: 0;">Officially registered as a Provincial Girls' Boarding School, systematically expanding options for regional enrollment.</p>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-year">2024</div>
-              <p style="font-size: 14px; margin-bottom: 0;">Elevated by the Ministry of Education to a Category C1 National School status, successfully implementing the 8-4-4 and new CBC pathways for over 2,550 scholars.</p>
+              <p style="font-size: 14px; margin-bottom: 0;">Elevated to a Category C1 National School status, successfully serving over 2,550 scholars across modern curriculum pathways.</p>
             </div>
           </div>
         </div>
@@ -454,8 +506,7 @@
     </div>
   </section>
 
-  <!-- Section 2: Core Foundations & Values (Clean White Background Layer) -->
-  <section id="foundations-section" style="padding: 90px 0; background-color: #FFFFFF;">
+  <section id="foundations-section" class="py-premium bg-white">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -464,7 +515,6 @@
         </div>
       </div>
 
-      <!-- Environment and ICT blocks organized cleanly side-by-side -->
       <div class="row mb-5">
         <div class="col-lg-6 mb-4 mb-lg-0">
           <div class="info-block-card" style="height: 100%; margin-bottom: 0;">
@@ -480,26 +530,29 @@
         </div>
       </div>
 
-      <!-- Values Grid spanning elegantly underneath -->
-      <div class="row mt-5">
+      <div class="row mt-4">
         <div class="col-lg-12 text-center">
           <h4 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 25px;">Our Core School Values</h4>
         </div>
         <div class="col-lg-12">
           <div class="values-grid">
             <div class="value-card">
+              <div class="value-icon"><i class="fa fa-star"></i></div>
               <h5>Godliness</h5>
               <p>Developing morally upright, socially responsible, and acceptable individuals.</p>
             </div>
             <div class="value-card">
+              <div class="value-icon"><i class="fa fa-shield"></i></div>
               <h5>Integrity</h5>
               <p>Acting in an honest, accountable, and completely transparent manner.</p>
             </div>
             <div class="value-card">
+              <div class="value-icon"><i class="fa fa-heart"></i></div>
               <h5>Humility</h5>
               <p>Embracing humility as our distinct brand in our conduct and service delivery.</p>
             </div>
             <div class="value-card">
+              <div class="value-icon"><i class="fa fa-briefcase"></i></div>
               <h5>Dignity of Work</h5>
               <p>Appreciating honest labor as a verified way to improve the quality of life.</p>
             </div>
@@ -509,23 +562,22 @@
     </div>
   </section>
 
-  <section id="departments-section" style="padding: 90px 0; background-color: var(--brand-sky); clear: both;">
+  <section id="departments-section" class="py-premium bg-sky" style="clear: both;">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
           <span class="section-label">Academic Framework</span>
-          <h2 class="section-main-title">Our Main Core Departments</h2>
+          <h2 class="section-main-title">Featured Core Departments</h2>
         </div>
       </div>
       
       <div class="row">
-        
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="dept-card">
             <img src="assets/images/science.jpg" class="dept-img" alt="Sciences and STEM">
             <div class="dept-body">
               <h4>Department of Sciences</h4>
-              <p>Comprising Biology, Chemistry and Physics. Our well-equipped laboratory layout exposes students to rigorous practical analysis, hypothesis validation and annual Science Congress innovations.</p>
+              <p>Comprising Biology, Chemistry and Physics. Our well-equipped laboratory layout exposes students to rigorous practical analysis and annual Science Congress innovations.</p>
             </div>
           </div>
         </div>
@@ -535,27 +587,7 @@
             <img src="assets/images/math.jpg" class="dept-img" alt="Mathematics Center">
             <div class="dept-body">
               <h4>Department of Mathematics</h4>
-              <p>Driving quantitative accuracy, logic formulation and systematic calculations. The department hosts regular internal contests and registers good scores in the KCSE National examinations.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="dept-card">
-            <img src="assets/images/linguistics.jpg" class="dept-img" alt="Linguistics and Languages">
-            <div class="dept-body">
-              <h4>Languages & Linguistics</h4>
-              <p>Nurturing professional communications through comprehensive English, Kiswahili and Foreign Language elective studies. We guide voice training, creative writing and public essay entries.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="dept-card">
-            <img src="assets/images/humanities.jpg" class="dept-img" alt="Humanities Framework">
-            <div class="dept-body">
-              <h4>Department of Humanities</h4>
-              <p>Exploring global sociology, history, geographical mappings and Christian Religious Education. This track establishes critical thinking tools and ethical perspectives regarding societal development.</p>
+              <p>Driving quantitative accuracy, logic formulation and calculation paths. The department hosts regular contests and delivers competitive national performance metrics.</p>
             </div>
           </div>
         </div>
@@ -565,16 +597,21 @@
             <img src="assets/images/comp-lab.jpg" class="dept-img" alt="Applied Sciences">
             <div class="dept-body">
               <h4>Applied & Technical Sciences</h4>
-              <p>Instilling future-proof modern technical survival skills including highly interactive Computer Studies, standard Home Science practices and practical structural agricultural modules.</p>
+              <p>Instilling future-proof survival skills including highly interactive Computer Studies, standard Home Science setups, and practical agricultural learning modules.</p>
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <a href="academics.html" class="btn-brand-outline">Explore All Academic Fields</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="cocurricular-section" style="padding: 90px 0; background-color: #FFFFFF;">
+  <section id="cocurricular-section" class="py-premium bg-white">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4">
@@ -605,31 +642,37 @@
     </div>
   </section>
 
-  <section id="infrastructure-section" style="padding: 90px 0; background-color: var(--brand-sky);">
+  <section id="infrastructure-section" class="py-premium bg-sky">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
           <span class="section-label">Campus Environment</span>
-          <h2 class="section-main-title">Premium Facilities & Resources</h2>
+          <h2 class="section-main-title">Premium Facilities & Support Systems</h2>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 col-md-12 mb-4">
-          <div style="background-color: #FFFFFF; padding: 30px; border-radius: 12px; height: 100%;">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="card-pocket">
             <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 15px;"><i class="fa fa-bed" style="color: var(--brand-blue-light); margin-right: 10px;"></i> Modern Hostels</h5>
             <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Our spacious, well-aerated boarding dormitories provide clean sanitization spaces, optimal safety storage containers and assigned multi-point safety exits managed by resident matrons.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-12 mb-4">
-          <div style="background-color: #FFFFFF; padding: 30px; border-radius: 12px; height: 100%;">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="card-pocket">
             <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 15px;"><i class="fa fa-laptop" style="color: var(--brand-blue-light); margin-right: 10px;"></i> Computer Resource Rooms</h5>
             <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Equipped with modern desktop modules, secure high-speed local networks and specific coding tools where our girls can perform technical research and educational workflows.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-12 mb-4">
-          <div style="background-color: #FFFFFF; padding: 30px; border-radius: 12px; height: 100%;">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="card-pocket">
             <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 15px;"><i class="fa fa-cutlery" style="color: var(--brand-blue-light); margin-right: 10px;"></i> Dining Complex</h5>
             <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">A modern kitchen facility focused on strictly audited clean dietary standards, serving regular, balanced programmatic nutritional meals to sustain healthy academic focus metrics.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="card-pocket">
+            <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 15px;"><i class="fa fa-users" style="color: var(--brand-blue-light); margin-right: 10px;"></i> Guidance & Counseling Center</h5>
+            <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">A dedicated, confidential support department offering comprehensive mental wellness tracking, academic path counseling, and peer mentorship frameworks tailored for the modern girl-child.</p>
           </div>
         </div>
       </div>
@@ -702,7 +745,6 @@
                 <span style="font-size: 15px;">P.O. Box 376 - 50200,<br>Bungoma, Western Kenya</span>
               </li>
             </ul>
-            <!-- New Instant WhatsApp Inquiry Action Link -->
             <a href="https://wa.me/254723340502?text=Hello%20Cardinal%20Otunga%20Girls%20Admission,%20I%20have%20an%20inquiry%20regarding..." 
                class="whatsapp-btn" 
                target="_blank" 

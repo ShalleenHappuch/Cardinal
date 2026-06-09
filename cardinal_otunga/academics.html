@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learn about the subjects and academic departments at Cardinal Otunga Girls' National School, Bungoma.">
+    <meta name="author" content="Cardinal Otunga Girls">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Our Subjects - Cardinal Otunga Girls' National School</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    
+    <style>
+      :root {
+        --brand-blue-dark: #0B2545;
+        --brand-blue-royal: #134074;
+        --brand-blue-light: #1D4ED8;
+        --brand-sky: #EEF2F6;
+        --text-dark: #1E293B;
+        --text-muted: #64748B;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #FFFFFF;
+        color: var(--text-dark);
+      }
+
+      /* Reusable Layout Styles */
+      .py-premium {
+        padding: 60px 0;
+      }
+      
+      .bg-sky {
+        background-color: var(--brand-sky);
+      }
+
+      .bg-white {
+        background-color: #FFFFFF;
+      }
+
+      .section-label {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--brand-blue-light);
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .section-main-title {
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--brand-blue-dark);
+        margin-bottom: 30px;
+      }
+
+      /* Navigation & Header Styles */
+      .sub-header {
+        background-color: var(--brand-blue-dark) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 12px 0;
+      }
+
+      .sub-header p {
+        color: #FFFFFF !important;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+
+      .sub-header em {
+        font-style: normal;
+        color: #93C5FD;
+        font-weight: 700;
+      }
+
+      header.header-area {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 9999 !important;
+        background-color: #FFFFFF !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+        padding: 0 !important;
+        height: 80px !important;
+      }
+
+      header.header-area .main-nav {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: 80px !important;
+        background: transparent !important;
+      }
+
+      header.header-area .main-nav .logo {
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+        line-height: normal !important;
+        height: auto !important;
+        margin-top: 0 !important;
+        text-transform: none !important;
+        float: none !important;
+      }
+
+      header.header-area .main-nav .nav {
+        display: flex !important;
+        align-items: center !important;
+        margin-top: 0 !important;
+        float: none !important;
+      }
+
+      header.header-area .main-nav .nav li {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+      }
+
+      header.header-area .main-nav .nav li a {
+        color: var(--brand-blue-dark) !important;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 0 10px !important;
+        line-height: 40px !important;
+        height: 40px !important;
+      }
+
+      header.header-area .main-nav .nav li a:hover,
+      header.header-area .main-nav .nav li a.active {
+        color: var(--brand-blue-light) !important;
+        background: transparent !important;
+      }
+
+      header.header-area .menu-trigger {
+        top: 23px !important;
+      }
+
+      /* Simple Page Banner */
+      .internal-banner {
+        position: relative;
+        background: linear-gradient(rgba(11, 37, 69, 0.9), rgba(19, 64, 116, 0.9)), 
+                    url('assets/images/hero-bg.jpg'); 
+        background-size: cover;
+        background-position: center;
+        padding: 60px 0; 
+        color: #FFFFFF;
+      }
+
+      .internal-caption h1 {
+        font-size: 34px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      .internal-caption p {
+        font-size: 15px;
+        opacity: 0.9;
+        margin-bottom: 0;
+      }
+
+      /* Department Cards */
+      .dept-card {
+        background: #FFFFFF;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        margin-bottom: 30px;
+        height: calc(100% - 30px);
+        transition: transform 0.3s ease;
+      }
+
+      .dept-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .dept-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .dept-body {
+        padding: 20px;
+      }
+
+      .dept-body h4 {
+        color: var(--brand-blue-dark);
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid var(--brand-sky);
+        padding-bottom: 6px;
+      }
+
+      .dept-body p {
+        color: var(--text-muted);
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+
+      /* Notice Box */
+      .curriculum-callout {
+        background-color: var(--brand-sky);
+        border-radius: 12px;
+        padding: 30px;
+        border-left: 6px solid var(--brand-blue-light);
+      }
+
+      /* Footer Styles */
+      .custom-footer-base {
+        background-color: #07162C;
+        color: #94A3B8;
+        padding: 40px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 14px;
+      }
+
+      .whatsapp-btn {
+        background-color: #25D366;
+        color: #FFFFFF !important;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 12px 20px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        margin-top: 15px;
+        width: 100%;
+        border: none;
+      }
+
+      .whatsapp-btn:hover {
+        background-color: #20BA56;
+      }
+
+      .whatsapp-btn i {
+        font-size: 18px;
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+
+<body>
+
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+            <p>Motto: <em>Like Eagles, We Soar High</em> | KNEC Code: <strong>36611001</strong></p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+          <div class="right-icons">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <a href="index.html" class="logo">
+                          <img src="assets/images/logo.png" alt="School Logo" style="height: 50px; width: auto; margin-right: 12px; display: inline-block;">
+                          <span style="font-size: 14px; font-weight: 800; color: var(--brand-blue-dark); line-height: 1.3; display: inline-block;">CARDINAL OTUNGA GIRLS'<br>NATIONAL SCHOOL</span>
+                      </a>
+                      <ul class="nav">
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="index.html#about-section">About Us</a></li>
+                          <li><a href="academics.html" class="active">Academics</a></li> 
+                          <li><a href="index.html#cocurricular-section">Co-Curriculars</a></li>
+                          <li><a href="index.html#infrastructure-section">Campus Life</a></li>
+                          <li><a href="alumni.html">Alumni</a></li> 
+                          <li><a href="#contact-section">Contact</a></li> 
+                      </ul>        
+                      <a class='menu-trigger'><span>Menu</span></a>
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  
+  <section class="internal-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="internal-caption text-center">
+              <h1>What Our Students Learn</h1>
+              <p>A clear guide to our school departments and academic choices for our girls.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="py-premium bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <span class="section-label">School Subjects</span>
+          <h2 class="section-main-title">Our Academic Departments</h2>
+        </div>
+      </div>
+      
+      <div class="row align-items-stretch">
+        <div class="col-lg-4 col-md-6">
+          <div class="dept-card">
+            <img src="assets/images/science.jpg" class="dept-img" alt="Sciences">
+            <div class="dept-body">
+              <h4>Department of Sciences</h4>
+              <p>Covers Biology, Chemistry, and Physics. We have well-equipped science laboratories where students do practical experiments to prepare thoroughly for their national exams.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="dept-card">
+            <img src="assets/images/math.jpg" class="dept-img" alt="Mathematics">
+            <div class="dept-body">
+              <h4>Department of Mathematics</h4>
+              <p>Focuses on helping students build strong skills in numbers, logic, and problem-solving. The team organizes regular mathematics contests and revision sessions to boost student grades.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="dept-card">
+            <img src="assets/images/comp-lab.jpg" class="dept-img" alt="Technical Sciences">
+            <div class="dept-body">
+              <h4>Technical & Applied Sciences</h4>
+              <p>Teaches valuable practical life skills. This department includes **Computer Studies**, **Home Science**, and **Agriculture**, where girls get hands-on experience in technology and farming.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="dept-card">
+            <img src="assets/images/languages.jpg" class="dept-img" alt="Languages">
+            <div class="dept-body">
+              <h4>Department of Languages</h4>
+              <p>Teaches English and Kiswahili, which are core subjects for all students. The department focuses on public speaking, creative writing, and helping girls communicate with confidence.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="dept-card">
+            <img src="assets/images/humanities.jpg" class="dept-img" alt="Humanities">
+            <div class="dept-body">
+              <h4>Department of Humanities</h4>
+              <p>Helps students understand society, history, and Christian values. This department teaches History & Government, Geography, and Christian Religious Education (C.R.E.).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="dept-card">
+            <img src="assets/images/business.jpg" class="dept-img" alt="Business and Creative Arts">
+            <div class="dept-body">
+              <h4>Business & Creative Arts</h4>
+              <p>Introduces students to financial skills and artistic talents. It includes **Business Studies**, **Music**, and **Fine Arts** to support both entrepreneurial minds and creative students.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-premium bg-sky" style="padding: 40px 0;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="curriculum-callout">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h4 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 10px;">Our Curriculum</h4>
+                <p style="font-size: 14px; color: var(--text-dark); line-height: 1.6; margin-bottom: 0;">
+                  We follow the official Ministry of Education guidelines, fully preparing our students for their KCSE national examinations. Our teachers offer extra guidance, evening remedial learning, and regular assessment tests to ensure every girl achieves her best score.
+                </p>
+              </div>
+              <div class="col-md-4 text-md-right mt-3 mt-md-0">
+                <a href="index.html#contact-section" class="btn btn-brand-primary" style="background-color: var(--brand-blue-light) !important; color: #fff !important; border-radius: 30px; padding: 12px 25px; font-weight:600; display:inline-block;">Ask a Question</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-us" id="contact-section" style="padding: 60px 0 0 0; background-color: #FFFFFF;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 align-self-center mb-5">
+          <form id="contact" action="" method="post" style="border: 1px solid #E2E8F0;">
+            <div class="row">
+              <div class="col-lg-12">
+                <span class="section-label">Get In Touch</span>
+                <h2 style="margin-bottom: 25px;">Send Us a Message</h2>
+              </div>
+              <div class="col-lg-6">
+                <input name="name" type="text" placeholder="Your Name*" required="">
+              </div>
+              <div class="col-lg-6">
+                <input name="email" type="email" placeholder="Your Email Address*" required="">
+              </div>
+              <div class="col-lg-12">
+                <textarea name="message" placeholder="Type your questions here...*" required=""></textarea>
+              </div>
+              <div class="col-lg-12">
+                <button type="submit" class="btn" style="background-color: var(--brand-blue-light) !important;">Submit Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="right-info" style="background-color: var(--brand-blue-dark); border-radius: 12px; padding: 40px; color: #FFFFFF;">
+            <h5 style="color: #FFFFFF; font-weight: 700; margin-bottom: 25px; border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Contact Office</h5>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 20px;">
+                <h6 style="color: #93C5FD; font-weight: 600; font-size: 14px; text-transform: uppercase;">Phone Numbers</h6>
+                <span style="font-size: 15px;">+254 723 340 502<br>+254 722 227 653</span>
+              </li>
+              <li style="margin-bottom: 20px;">
+                <h6 style="color: #93C5FD; font-weight: 600; font-size: 14px; text-transform: uppercase;">Email Address</h6>
+                <span style="font-size: 15px;">info@cardinalotungagirls.sc.ke</span>
+              </li>
+              <li style="margin-bottom: 20px;">
+                <h6 style="color: #93C5FD; font-weight: 600; font-size: 14px; text-transform: uppercase;">Postal Address</h6>
+                <span style="font-size: 15px;">P.O. Box 376 - 50200,<br>Bungoma, Kenya</span>
+              </li>
+            </ul>
+            <a href="https://wa.me/254723340502?text=Hello%20Cardinal%20Otunga%20Girls%20Admission,%20I%20have%20an%20inquiry%20regarding..." 
+               class="whatsapp-btn" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <i class="fa fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-footer-base">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p style="margin-bottom: 8px; color: #FFFFFF;">Copyright © 2026 Cardinal Otunga Girls' National School Bungoma. All Rights Reserved.</p>
+            <p style="margin-bottom: 0; font-size: 12px; color: #64748B;">Designed and Developed by: <span style="color: #93C5FD; font-weight: 600;">Shalleen H</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/video.js"></script>
+  <script src="assets/js/slick-slider.js"></script>
+</body>
+</html>
