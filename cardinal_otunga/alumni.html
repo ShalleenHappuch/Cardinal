@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Alumni Registry for Cardinal Otunga Girls' High School, Bungoma. Reconnect, give back, and celebrate our shared legacy.">
+    <meta name="description" content="Alumni Registry for Cardinal Otunga Girls' National School, Bungoma. Reconnect, give back, and celebrate our shared legacy.">
     <meta name="author" content="Cardinal Otunga Girls">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -27,10 +27,27 @@
         --text-muted: #64748B;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         font-family: 'Poppins', sans-serif;
         background-color: #FFFFFF;
         color: var(--text-dark);
+      }
+
+      /* Reusable Layout Styles */
+      .py-premium {
+        padding: 60px 0;
+      }
+      
+      .bg-sky {
+        background-color: var(--brand-sky);
+      }
+
+      .bg-white {
+        background-color: #FFFFFF;
       }
 
       .section-label {
@@ -44,12 +61,13 @@
       }
 
       .section-main-title {
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 800;
         color: var(--brand-blue-dark);
-        margin-bottom: 40px;
+        margin-bottom: 30px;
       }
 
+      /* Navigation & Header Styles (Synced & Mobile Optimized) */
       .sub-header {
         background-color: var(--brand-blue-dark) !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -70,50 +88,116 @@
       }
 
       header.header-area {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 9999 !important;
         background-color: #FFFFFF !important;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-        padding: 15px 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+        padding: 0 !important;
+        height: 80px !important;
+      }
+
+      header.header-area .main-nav {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: 80px !important;
+        background: transparent !important;
+      }
+
+      header.header-area .main-nav .logo {
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+        line-height: normal !important;
+        height: auto !important;
+        margin-top: 0 !important;
+        text-transform: none !important;
+        float: none !important;
+        flex-shrink: 0;
+      }
+
+      header.header-area .main-nav .logo span {
+        font-size: 14px; 
+        font-weight: 800; 
+        color: var(--brand-blue-dark); 
+        line-height: 1.3; 
+        display: inline-block;
+      }
+
+      header.header-area .main-nav .nav {
+        display: flex !important;
+        align-items: center !important;
+        margin-top: 0 !important;
+        float: none !important;
+      }
+
+      header.header-area .main-nav .nav li {
+        padding-left: 4px !important;
+        padding-right: 4px !important;
       }
 
       header.header-area .main-nav .nav li a {
         color: var(--brand-blue-dark) !important;
         font-weight: 600;
-        font-size: 15px;
+        font-size: 14px;
+        padding: 0 8px !important;
+        line-height: 40px !important;
+        height: 40px !important;
+        transition: color 0.2s ease;
       }
 
       header.header-area .main-nav .nav li a:hover,
       header.header-area .main-nav .nav li a.active {
         color: var(--brand-blue-light) !important;
+        background: transparent !important;
       }
 
-      /* Custom Hero variant specifically tailored for the Alumni Subpage */
-      .alumni-hero-banner {
+      header.header-area .menu-trigger {
+        top: 23px !important;
+      }
+
+      /* Responsive Fix: Prevents menu items from wrapping to a second line on medium desktop screens */
+      @media (max-width: 1200px) and (min-width: 992px) {
+        header.header-area .main-nav .logo img {
+          height: 40px !important;
+        }
+        header.header-area .main-nav .logo span {
+          font-size: 11px !important;
+        }
+        header.header-area .main-nav .nav li a {
+          font-size: 12px !important;
+          padding: 0 5px !important;
+        }
+      }
+
+      /* Consistent Internal Page Banner */
+      .internal-banner {
         position: relative;
         background: linear-gradient(rgba(11, 37, 69, 0.9), rgba(19, 64, 116, 0.9)), 
                     url('assets/images/hero-bg.jpg'); 
         background-size: cover;
         background-position: center;
-        padding: 250px 0 130px 0; /* Adjusted top padding from 200px to 250px */
+        padding: 60px 0; 
         color: #FFFFFF;
-        text-align: center;
       }
 
-      .alumni-hero-caption h2 {
-        font-size: 46px;
-        font-weight: 900;
-        line-height: 1.2;
-        margin-bottom: 20px;
+      .internal-caption h1 {
+        font-size: 34px;
+        font-weight: 800;
+        margin-bottom: 10px;
       }
 
-      .alumni-hero-caption p {
-        font-size: 18px;
+      .internal-caption p {
+        font-size: 15px;
+        opacity: 0.9;
+        margin-bottom: 0;
         max-width: 750px;
-        margin: 0 auto;
-        opacity: 0.95;
-        line-height: 1.8;
+        margin-left: auto;
+        margin-right: auto;
       }
 
-      /* Native styled call-to-action card matching theme design tokens */
+      /* Call-to-action registration block */
       .alumni-form-card {
         background: #FFFFFF;
         border: 1px solid #E2E8F0;
@@ -137,6 +221,7 @@
         transform: translateY(-4px);
       }
 
+      /* Clean Baseline Footer */
       .custom-footer-base {
         background-color: #07162C;
         color: #94A3B8;
@@ -175,16 +260,17 @@
           <div class="row">
               <div class="col-12">
                   <nav class="main-nav">
-                      <a href="index.html" class="logo" style="margin-top: 10px;">
-                          <span style="font-size: 20px; font-weight: 800; color: var(--brand-blue-dark);">CARDINAL OTUNGA GIRLS' NATIONAL SCHOOL</span>
+                      <a href="index.html" class="logo">
+                          <img src="assets/images/logo.png" alt="School Logo" style="height: 50px; width: auto; margin-right: 12px; display: inline-block;">
+                          <span>CARDINAL OTUNGA GIRLS'<br>NATIONAL SCHOOL</span>
                       </a>
                       <ul class="nav">
-                          <li><a href="index.html#top">Home</a></li>
+                          <li><a href="index.html">Home</a></li>
                           <li><a href="index.html#about-section">About Us</a></li>
-                          <li><a href="index.html#departments-section">Academic Departments</a></li> 
+                          <li><a href="academics.html">Academics</a></li> 
                           <li><a href="index.html#cocurricular-section">Co-Curriculars</a></li>
                           <li><a href="index.html#infrastructure-section">Campus Life</a></li>
-                          <li><a href="alumni.html" class="active">Our Alumni</a></li> 
+                          <li><a href="alumni.html" class="active">Alumni</a></li> 
                           <li><a href="index.html#contact-section">Contact</a></li> 
                       </ul>        
                       <a class='menu-trigger'><span>Menu</span></a>
@@ -194,21 +280,20 @@
       </div>
   </header>
 
-  <section class="alumni-hero-banner">
+  <section class="internal-banner">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <div class="alumni-hero-caption">
-              <h2>Once an Eagle, Always an Eagle</h2>
-              <p>We are rebuilding the historic lineage of Cardinal Otunga Girls' National School. Step forward, reconnect with your classmates and help us anchor the framework for our new active Alumni Association.</p>
+            <div class="internal-caption text-center">
+              <h1>Once an Eagle, Always an Eagle</h1>
+              <p>Step forward, reconnect with classmates, and help us anchor the framework for our active Alumni Association.</p>
             </div>
           </div>
         </div>
       </div>
   </section>
 
-  <!-- Benefits & Registration Section -->
-  <section style="padding: 90px 0; background-color: #FFFFFF;">
+  <section class="py-premium bg-white">
     <div class="container">
       <div class="row">
         
@@ -225,7 +310,7 @@
             </div>
             <div>
               <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 5px;">Professional Network</h5>
-              <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 0;">Connect with fellow "Old Girls" across diverse fields, corporate structures and international locations.</p>
+              <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 0;">Connect with fellow "Old Girls" across diverse fields, corporate structures, and international locations.</p>
             </div>
           </div>
 
@@ -245,7 +330,7 @@
             </div>
             <div>
               <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 5px;">Alumni Communications</h5>
-              <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 0;">Get early alerts regarding milestone physical setups, development progress and upcoming dinners.</p>
+              <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 0;">Get early alerts regarding milestone physical setups, development progress, and upcoming dinners.</p>
             </div>
           </div>
         </div>
@@ -258,7 +343,7 @@
               We use secure Google Forms to manage our alumni submissions. It takes less than two minutes to submit your details and securely reconnect with the school network.
             </p>
             
-            <a href="https://forms.gle/nCPuHzewmXepkS6L9" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: var(--brand-blue-light) !important; color: #FFFFFF; font-weight: 600; padding: 15px 40px; border-radius: 30px; border: none; display: inline-block; transition: transform 0.2s ease;">
+            <a href="https://forms.gle/" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: var(--brand-blue-light) !important; color: #FFFFFF; font-weight: 600; padding: 15px 40px; border-radius: 30px; border: none; display: inline-block; transition: transform 0.2s ease;">
               <i class="fa fa-external-link" style="margin-right: 8px;"></i> Open Alumni Registration Form
             </a>
             
@@ -272,21 +357,19 @@
     </div>
   </section>
 
-  <!-- NEW SECTION: Alumni Office Contact Desk -->
-  <section style="padding: 90px 0; background-color: var(--brand-sky);">
+  <section class="py-premium bg-sky">
     <div class="container">
       <div class="row justify-content-center text-center mb-5">
         <div class="col-lg-8">
           <span class="section-label">Direct Communication</span>
           <h2 class="section-main-title" style="margin-bottom: 15px;">Connect with the Alumni Desk</h2>
           <p style="color: var(--text-muted); line-height: 1.7;">
-            Have questions about upcoming association frameworks, coordinate manual data updates, or planning a graduation reunion milestone? Get in touch directly with our dedicated coordinator.
+            Have questions about upcoming association frameworks, manual data updates, or planning a milestone graduation reunion? Get in touch directly with our dedicated coordinator.
           </p>
         </div>
       </div>
       
       <div class="row">
-        <!-- Contact Card 1: Person Profile -->
         <div class="col-md-4 mb-4">
           <div class="contact-info-card text-center">
             <div style="color: var(--brand-blue-light); font-size: 32px; margin-bottom: 15px;">
@@ -300,7 +383,6 @@
           </div>
         </div>
 
-        <!-- Contact Card 2: Email -->
         <div class="col-md-4 mb-4">
           <div class="contact-info-card text-center">
             <div style="color: var(--brand-blue-light); font-size: 32px; margin-bottom: 15px;">
@@ -314,7 +396,6 @@
           </div>
         </div>
 
-        <!-- Contact Card 3: Phone/Hours -->
         <div class="col-md-4 mb-4">
           <div class="contact-info-card text-center">
             <div style="color: var(--brand-blue-light); font-size: 32px; margin-bottom: 15px;">
@@ -322,7 +403,7 @@
             </div>
             <h5 style="color: var(--brand-blue-dark); font-weight: 700; margin-bottom: 8px;">Call or Visit</h5>
             <p style="font-size: 14px; color: var(--text-dark); font-weight: 600; margin-bottom: 0;">
-              +254 (0) 7XX XXX XXX
+              +254 (0) 723 340 502
             </p>
             <p style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Mon – Fri: 8:00 AM – 4:00 PM EAT</p>
           </div>
@@ -331,11 +412,10 @@
     </div>
   </section>
 
-  <!-- Corrected Footer Base Structure -->
   <footer class="custom-footer-base">
     <div class="container">
       <div class="row">
-        <div class="md-12 text-center">
+        <div class="col-md-12 text-center">
           <p style="margin-bottom: 8px; color: #FFFFFF;">Copyright © 2026 Cardinal Otunga Girls' National School Bungoma. All Rights Reserved.</p>
           <p style="margin-bottom: 0; font-size: 12px; color: #64748B;">Designed and Developed by: <span style="color: #93C5FD; font-weight: 600;">Shalleen H</span></p>
         </div>
