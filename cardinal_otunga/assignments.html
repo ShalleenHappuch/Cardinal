@@ -236,6 +236,13 @@
       color: var(--brand-blue-light);
     }
 
+    .status-message {
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
     /* ==========================================================================
        5. PORTAL FOOTER BASE
        ========================================================================== */
@@ -245,6 +252,7 @@
       padding: 30px 0;
       font-size: 13px;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: auto;
     }
 
     /* ==========================================================================
@@ -279,7 +287,7 @@
   <header class="portal-nav-bar">
     <div class="container portal-nav-container">
       <a href="index.html" class="portal-logo-lockup">
-        <img src="assets/images/play-icon.png" alt="School Logo" style="height: 40px; width: auto; margin-right: 10px;">
+        <img src="assets/images/logo.png" alt="School Logo" style="height: 40px; width: auto; margin-right: 10px;">
         <span>CARDINAL OTUNGA GIRLS'<br>NATIONAL SCHOOL</span>
       </a>
       <a href="index.html" class="btn-exit-portal">
@@ -300,10 +308,10 @@
         <label for="formSelect">Target Form</label>
         <select id="formSelect" class="filter-select">
           <option value="all">All Classes</option>
-          <option value="form1">Form 1</option>
-          <option value="form2">Form 2</option>
-          <option value="form3">Form 3</option>
-          <option value="form4">Form 4</option>
+          <option value="Form 1">Form 1</option>
+          <option value="Form 2">Form 2</option>
+          <option value="Form 3">Form 3</option>
+          <option value="Form 4">Form 4</option>
         </select>
       </div>
       
@@ -311,10 +319,21 @@
         <label for="subjectSelect">Subject Field</label>
         <select id="subjectSelect" class="filter-select">
           <option value="all">All Subjects</option>
-          <option value="math">Mathematics</option>
-          <option value="bio">Biology</option>
-          <option value="chem">Chemistry</option>
-          <option value="eng">English</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="English">English</option>
+          <option value="Hexadecimal">Kiswahili</option>
+          <option value="Biology">Biology</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Physics">Physics</option>
+          <option value="History">History</option>
+          <option value="Geography">Geography</option>
+          <option value="CRE">CRE</option>
+          <option value="Business Studies">Business Studies</option>
+          <option value="Agriculture">Agriculture</option>
+          <option value="Computer Studies">Computer Studies</option>
+          <option value="French">French</option>
+          <option value="Music">Music</option>
+          <option value="Fine Arts">Fine Arts</option>
         </select>
       </div>
     </div>
@@ -327,22 +346,8 @@
         <div style="text-align: right;">Action</div>
       </div>
 
-      <div class="data-row">
-        <div class="subject-cell">Mathematics</div>
-        <div class="title-cell">Form 4 Calculus Integration Revision Paper 2</div>
-        <div class="date-cell">Jun 08, 2026</div>
-        <div class="action-cell">
-          <a href="#" class="btn-download"><i class="fa fa-download"></i> Download PDF</a>
-        </div>
-      </div>
-
-      <div class="data-row">
-        <div class="subject-cell">Biology</div>
-        <div class="title-cell">Form 3 Genetics & Cross-Inheritance Practical Data Sheet</div>
-        <div class="date-cell">Jun 05, 2026</div>
-        <div class="action-cell">
-          <a href="#" class="btn-download"><i class="fa fa-download"></i> Download PDF</a>
-        </div>
+      <div id="assignmentRows">
+        <div class="status-message"><i class="fa fa-spinner fa-spin"></i> Initializing directory stream...</div>
       </div>
     </div>
   </main>
@@ -353,6 +358,99 @@
       <p style="margin-bottom: 0; font-size: 11px; color: #64748B;">Designed and Developed by: <span style="color: #93C5FD; font-weight: 600;">Shalleen H</span></p>
     </div>
   </footer>
+
+  <script>
+    const DATA_ENDPOINT = 'assets/data/assignments.json';
+    const rowsContainer = document.getElementById('assignmentRows');
+    const formSelect = document.getElementById('formSelect');
+    const subjectSelect = document.getElementById('subjectSelect');
+    
+    let allAssignments = [];
+
+    // Master Fetch Action from Git Storage
+    async function loadDirectory() {
+      try {
+        const response = await fetch(DATA_ENDPOINT);
+        if (!response.ok) throw new Error('Data file missing or empty');
+        
+        const data = await response.json();
+        // Fall back gracefully if items property does not exist yet
+        allAssignments = data.items || [];
+        
+        renderTable(allAssignments);
+      } catch (error) {
+        console.warn("CMS Target File Status:", error.message);
+        rowsContainer.innerHTML = `
+          <div class="status-message">
+            <i class="fa fa-info-circle" style="color: var(--brand-blue-light);"></i> 
+            No coursework files have been published to the student portal yet. Check back soon.
+          </div>`;
+      }
+    }
+
+    // DOM Render Execution Block
+    function renderTable(list) {
+      // Clear container fully before drawing elements
+      rowsContainer.innerHTML = '';
+
+      if (list.length === 0) {
+        rowsContainer.innerHTML = `
+          <div class="status-message">
+            No matching assignments found for your current filter selections.
+          </div>`;
+        return;
+      }
+
+      // Reconstruct DOM items systematically
+      list.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'data-row';
+        
+        row.innerHTML = `
+          <div class="subject-cell">${escapeHtml(item.subject)} <span style="font-size: 11px; font-weight:500; color:var(--text-muted); display:block; text-transform:uppercase;">${escapeHtml(item.form)}</span></div>
+          <div class="title-cell">${escapeHtml(item.title)}</div>
+          <div class="date-cell">${escapeHtml(item.date)}</div>
+          <div class="action-cell">
+            <a href="${item.assignment_file || '#'}" target="_blank" class="btn-download">
+              <i class="fa fa-download"></i> Download PDF
+            </a>
+          </div>
+        `;
+        rowsContainer.appendChild(row);
+      });
+    }
+
+    // Dynamic Filter Interception Algorithm
+    function executeFiltering() {
+      const selectedForm = formSelect.value;
+      const selectedSubject = subjectSelect.value;
+
+      const workingOutput = allAssignments.filter(assignment => {
+        const matchesForm = (selectedForm === 'all' || assignment.form === selectedForm);
+        const matchesSubject = (selectedSubject === 'all' || assignment.subject === selectedSubject);
+        return matchesForm && matchesSubject;
+      });
+
+      renderTable(workingOutput);
+    }
+
+    // XSS Sanitization Guardrail
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+    }
+
+    // Trigger Event Bindings
+    formSelect.addEventListener('change', executeFiltering);
+    subjectSelect.addEventListener('change', executeFiltering);
+
+    // Boot Up Script on Page Initialization
+    document.addEventListener('DOMContentLoaded', loadDirectory);
+  </script>
 
 </body>
 </html>
