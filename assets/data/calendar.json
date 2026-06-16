@@ -1,0 +1,20 @@
+{
+  "events": [
+    {
+      "title": "Academic Day",
+      "day": "14",
+      "month": "Jun",
+      "category": "Academic",
+      "time": "08:00am - 04:00pm",
+      "body": "Parents having one on one conversation with their children's teachers about their academics"
+    },
+    {
+      "title": "Visiting Day",
+      "day": "20",
+      "month": "Jun",
+      "category": "Welfare",
+      "time": "09:00 AM — 05:00 PM",
+      "body": "Visiting day for all students"
+    }
+  ]
+}
