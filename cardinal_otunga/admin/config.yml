@@ -56,8 +56,11 @@ collections:
             allow_add: true
             fields:
               - { label: "Event Title", name: "title", widget: "string" }
-              - { label: "Event Day (Number)", name: "day", widget: "string", hint: "e.g., 24" }
-              - { label: "Event Month (Short)", name: "month", widget: "string", hint: "e.g., Jun" }
+
+              # Swap out manual day/month text fields for this single unified date picker:
+              - { label: "Event Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              # - { label: "Event Day (Number)", name: "day", widget: "string", hint: "e.g., 24" }
+              # - { label: "Event Month (Short)", name: "month", widget: "string", hint: "e.g., Jun" }
               - { label: "Category", name: "category", widget: "select", options: ["Academic", "Sports", "Welfare", "Holiday"] }
               - { label: "Time/Duration", name: "time", widget: "string", hint: "e.g., 09:00 AM — 04:00 PM" }
               - { label: "Event Details", name: "body", widget: "text" }
