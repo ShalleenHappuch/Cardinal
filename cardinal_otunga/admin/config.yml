@@ -17,7 +17,7 @@ collections:
     files:
       - name: "assignments"
         label: "Student Assignments"
-        file: "cardinal_otungaassets/data/assignments.json" # One single file for JS to fetch!
+        file: "cardinal_otunga/assets/data/assignments.json" # One single file for JS to fetch!
         format: "json"
         fields:
           - label: "Assignments List"
@@ -47,7 +47,7 @@ collections:
 
       - name: "calendar"
         label: "School Calendar"
-        file: "cardinal_otungaassets/data/calendar.json" # One single file for JS to fetch!
+        file: "cardinal_otunga/assets/data/calendar.json" # One single file for JS to fetch!
         format: "json"
         fields:
           - label: "Upcoming Events List"
