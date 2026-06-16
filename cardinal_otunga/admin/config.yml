@@ -3,9 +3,10 @@ backend:
   branch: main
 
 media_library:
-  name: uploadcare
+  name: cloudinary
   config:
-    publicKey: "PLACEHOLDER_FOR_NOW"
+    cloud_name: "dtgmz36er"
+    api_key: "917969655193453"
 
 collections:
   - name: "portal_data"
