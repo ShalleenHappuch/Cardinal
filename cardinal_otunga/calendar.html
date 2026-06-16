@@ -23,6 +23,469 @@
       --text-muted: #64748B;
       --border-light: #E2E8F0;
       
+      /* Semantic Categorized Color Schemes (Synced with CMS options) */
+      --tag-academic-bg: #F5F3FF;
+      --tag-academic-text: #6D28D9; /* Deep Purple */
+      
+      --tag-sports-bg: #EFF6FF;
+      --tag-sports-text: #1D4ED8; /* Royal Blue */
+      
+      --tag-welfare-bg: #F0FDFA;
+      --tag-welfare-text: #0D9488; /* Calm Teal */
+      
+      --tag-holiday-bg: #FFF7ED;
+      --tag-holiday-text: #C2410C; /* Soft Amber/Orange */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-dark);
+      background-color: #FFFFFF;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 940px; /* Slim visual column balance */
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    main {
+      flex: 1;
+      padding-bottom: 60px;
+    }
+
+    /* ==========================================================================
+       2. BRAND PORTAL HEADER (Blue Bar with White Text)
+       ========================================================================== */
+    .portal-nav-bar {
+      background: var(--brand-blue-dark);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 15px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .portal-nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .portal-logo-lockup {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .portal-logo-lockup span {
+      font-size: 13px;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.3;
+    }
+
+    .btn-exit-portal {
+      font-size: 13px;
+      font-weight: 600;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-exit-portal:hover {
+      background-color: #FFFFFF;
+      color: var(--brand-blue-dark);
+      border-color: #FFFFFF;
+    }
+
+    .calendar-header {
+      padding: 45px 0 25px 0;
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 32px;
+    }
+
+    .calendar-header h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--brand-blue-dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .calendar-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Section Subheaders */
+    .timeline-section-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--brand-blue-dark);
+      margin: 35px 0 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .timeline-section-title.past-title {
+      color: var(--text-muted);
+      margin-top: 50px;
+      border-top: 2px dashed var(--border-light);
+      padding-top: 30px;
+    }
+
+    /* ==========================================================================
+       3. TIMELINE CARDS DESIGN
+       ========================================================================== */
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .event-row-card {
+      display: flex;
+      align-items: center;
+      padding: 24px;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      background-color: #FFFFFF;
+      transition: all 0.2s ease;
+    }
+
+    .event-row-card:hover {
+      background-color: var(--brand-sky);
+      transform: translateX(4px);
+    }
+
+    /* Visually fades out historical events to let active ones pop */
+    .past-container .event-row-card {
+      opacity: 0.75;
+      background-color: #FAFBFD;
+    }
+
+    /* Stark Typographic Date block */
+    .date-anchor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 80px;
+      margin-right: 35px;
+    }
+
+    .date-num {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--brand-blue-dark);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .past-container .date-num {
+      color: var(--text-muted);
+    }
+
+    .date-text {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Core Content Block */
+    .event-body {
+      flex-grow: 1;
+    }
+
+    .event-info-strip {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 6px;
+    }
+
+    .event-timestamp {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .event-headline {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--brand-blue-dark);
+      margin: 0 0 4px 0;
+      letter-spacing: -0.01em;
+    }
+
+    .past-container .event-headline {
+      color: var(--brand-blue-royal);
+    }
+
+    .event-snippet {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Premium Pill Badge Sub-system */
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    /* Automated Class Mapping Targets */
+    .tag-academic { background-color: var(--tag-academic-bg); color: var(--tag-academic-text); }
+    .tag-sports { background-color: var(--tag-sports-bg); color: var(--tag-sports-text); }
+    .tag-welfare { background-color: var(--tag-welfare-bg); color: var(--tag-welfare-text); }
+    .tag-holiday { background-color: var(--tag-holiday-bg); color: var(--tag-holiday-text); }
+
+    .status-message {
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       4. PORTAL FOOTER BASE
+       ========================================================================== */
+    .custom-footer-base {
+      background-color: #07162C;
+      color: #94A3B8;
+      padding: 30px 0;
+      font-size: 13px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: auto;
+    }
+
+    /* ==========================================================================
+       5. MOBILE RESPONSIVE ADAPTABILITY
+       ========================================================================== */
+    @media (max-width: 768px) {
+      .event-row-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 16px;
+      }
+      
+      .date-anchor {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 6px;
+        min-width: auto;
+        margin-bottom: 8px;
+      }
+      
+      .date-text {
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="portal-nav-bar">
+    <div class="container portal-nav-container">
+      <a href="index.html" class="portal-logo-lockup">
+        <img src="assets/images/logo.png" alt="School Logo" style="height: 40px; width: auto; margin-right: 10px;">
+        <span>CARDINAL OTUNGA GIRLS'<br>NATIONAL SCHOOL</span>
+      </a>
+      <a href="index.html" class="btn-exit-portal">
+        <i class="fa fa-arrow-left"></i> Back to Main Site
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <header class="calendar-header">
+      <h1>School Calendar & Events</h1>
+      <p>Stay informed regarding upcoming institutional milestones, term schedules, and parent-teacher consultative forums.</p>
+    </header>
+
+    <h2 class="timeline-section-title">
+      <i class="fa fa-calendar-check-o" style="color: var(--brand-blue-light);"></i> Upcoming Events
+    </h2>
+    <div id="upcomingEventsList" class="timeline-list">
+      <div class="status-message"><i class="fa fa-spinner fa-spin"></i> Loading schedule array...</div>
+    </div>
+
+    <h2 class="timeline-section-title past-title">
+      <i class="fa fa-history"></i> Past Events
+    </h2>
+    <div id="pastEventsList" class="timeline-list past-container">
+      </div>
+
+  </main>
+
+  <footer class="custom-footer-base">
+    <div class="container" style="text-align: center;">
+      <p style="margin-bottom: 6px; color: #FFFFFF;">Copyright © 2026 Cardinal Otunga Girls' National School Bungoma. All Rights Reserved.</p>
+      <p style="margin-bottom: 0; font-size: 11px; color: #64748B;">Designed and Developed by: <span style="color: #93C5FD; font-weight: 600;">Shalleen H</span></p>
+    </div>
+  </footer>
+
+  <script>
+    const CALENDAR_ENDPOINT = 'assets/data/calendar.json';
+    const upcomingContainer = document.getElementById('upcomingEventsList');
+    const pastContainer = document.getElementById('pastEventsList');
+
+    async function processTimeline() {
+      try {
+        const response = await fetch(CALENDAR_ENDPOINT);
+        if (!response.ok) throw new Error('Data endpoint offline');
+        
+        const data = await response.json();
+        const rawEvents = data.events || [];
+
+        // Set up clean base comparison boundary at midnight today
+        const todayBoundary = new Date();
+        todayBoundary.setHours(0, 0, 0, 0);
+
+        const upcomingArray = [];
+        const pastArray = [];
+
+        // Evaluate chronological timestamps
+        rawEvents.forEach(event => {
+          const targetDate = new Date(event.event_date);
+          // Set tracking instance to midnight to compare exact calendar days cleanly
+          const trackingInstance = new Date(targetDate);
+          trackingInstance.setHours(0, 0, 0, 0);
+
+          if (trackingInstance >= todayBoundary) {
+            upcomingArray.push({ ...event, parsedDate: targetDate });
+          } else {
+            pastArray.push({ ...event, parsedDate: targetDate });
+          }
+        });
+
+        // Sorting: Nearest upcoming event first, most recent past event first
+        upcomingArray.sort((a, b) => a.parsedDate - b.parsedDate);
+        pastArray.sort((a, b) => b.parsedDate - a.parsedDate);
+
+        // Inject compiled nodes into layout target columns
+        renderList(upcomingArray, upcomingContainer, "No upcoming events scheduled at this time.");
+        renderList(pastArray, pastContainer, "No historical events registered in this term cycle.");
+
+      } catch (error) {
+        console.warn("Calendar Storage Monitor:", error.message);
+        upcomingContainer.innerHTML = `
+          <div class="status-message">
+            <i class="fa fa-info-circle" style="color: var(--brand-blue-light);"></i> 
+            The school calendar has not been populated for this term yet. Check back soon.
+          </div>`;
+        pastContainer.innerHTML = `<div class="status-message">No historical entries found.</div>`;
+      }
+    }
+
+    function renderList(events, targetDOM, emptyMessage) {
+      targetDOM.innerHTML = '';
+
+      if (events.length === 0) {
+        targetDOM.innerHTML = `<div class="status-message">${emptyMessage}</div>`;
+        return;
+      }
+
+      events.forEach(item => {
+        // Safe programmatic extraction of text abbreviations from standard dates
+        const dayNumber = item.parsedDate.getDate();
+        const shortMonth = item.parsedDate.toLocaleString('en', { month: 'short' });
+        
+        // CSS Category Normalizer lookup string mapping
+        const cssSlug = (item.category || '').toLowerCase().replace(/\s+/g, '-');
+
+        const card = document.createElement('div');
+        card.className = 'event-row-card';
+        
+        card.innerHTML = `
+          <div class="date-anchor">
+            <span class="date-num">${dayNumber}</span>
+            <span class="date-text">${shortMonth}</span>
+          </div>
+          <div class="event-body">
+            <div class="event-info-strip">
+              <span class="pill-badge tag-${cssSlug}">${escapeHtml(item.category)}</span>
+              <span class="event-timestamp"><i class="fa fa-clock-o"></i> ${escapeHtml(item.time)}</span>
+            </div>
+            <h3 class="event-headline">${escapeHtml(item.title)}</h3>
+            <p class="event-snippet">${escapeHtml(item.body)}</p>
+          </div>
+        `;
+        targetDOM.appendChild(card);
+      });
+    }
+
+    // XSS Sanitization Layer
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+    }
+
+    document.addEventListener('DOMContentLoaded', processTimeline);
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Institutional Calendar | Cardinal Otunga Girls' National School</title>
+  
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+
+  <style>
+    /* ==========================================================================
+       1. BRAND SYSTEM VARIABLES & GLOBAL BASE (Synced with Portal Ecosystem)
+       ========================================================================== */
+    :root {
+      --brand-blue-dark: #0B2545;
+      --brand-blue-royal: #134074;
+      --brand-blue-light: #1D4ED8;
+      --brand-sky: #EEF2F6;
+      --text-dark: #1E293B;
+      --text-muted: #64748B;
+      --border-light: #E2E8F0;
+      
       /* Refined Semantic Pastel Tag System */
       --tag-sports-bg: #EFF6FF;
       --tag-sports-text: #1D4ED8;
@@ -379,4 +842,4 @@
   </footer>
 
 </body>
-</html>
+</html> -->
