@@ -3,9 +3,9 @@ backend:
   branch: main
 
 # 1. Where Git Gateway will physically drop uploaded PDFs/images inside my repository
-media_folder: "sub_folder/assets/uploads"
+media_folder: "cardinal_otunga/assets/uploads"
 # 2. The clean web URL path my HTML/JS will use to link to those files online
-public_folder: "/assets/uploads"
+public_folder: "cardinal_otunga/assets/uploads"
 
 media_library:
   name: cloudinary
